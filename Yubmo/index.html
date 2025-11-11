@@ -10,19 +10,24 @@
 		      width: 500px;                                                                                                                      px; /* 固定宽度，高度自动按比例缩放 */
 		      border-radius: 100%; /* 可选：圆形头像 */
 		    }
+			.btn-big 
+			{
+			width: 180px; /* 按钮宽度（越大越宽） */
+			height: 60px; /* 按钮高度（越大越高） */
+			font-size: 20px; /* 字体大小（配合按钮尺寸，避免文字太小） */
+			padding: 0 20px; /* 左右内边距（可选，让按钮内部更宽松） */
+			}
 		  </style>
 	</head>
 	<body>
-		<img src="chaoze.jpg" alt="aaaa" id="target" class="avatar">
-		<button onclick="yubmo()">点击me</button>
+		<img src="chaoze.jpg" alt="错误" id="target" class="avatar" hidden>
+		<button onclick="yubmo()" class="btn-big">点击me</button>
 		 <script>
 		    function yubmo() 
 			{
 		      const targetElement = document.getElementById('target');
 		      targetElement.hidden = !targetElement.hidden;
 		    }
-
 		  </script>
 	</body>
 </html>
-
